@@ -1,14 +1,15 @@
 def reciprocal_cipher(text):
-    text=text.upper()
-    result=""
+    text = text.upper()
+    cipher = ""
     for char in text:
-        if 'A'<=char<='Z':
-            cipher_text=chr(155-ord(char))
-            result+=cipher_text
+        if 'A'<= char <='Z':
+            cipher += chr(155-ord(char))
         else:
-            result+=char
-    return result
+            cipher += char
 
-original_text=input("Enter any string: ")
-encrypted=reciprocal_cipher(original_text)
-print("Encrypted text: ", encrypted)
+    return cipher
+
+# 
+plain_text=input("Enter your message: ")
+encrypted=reciprocal_cipher(plain_text)
+print("Encrypted text: ", encrypted)    
